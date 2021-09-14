@@ -48,10 +48,12 @@ export const Login = () => {
 
   return (
     <>
+    <div className={Style.loginContainer}>
       <h1>Login</h1>
+      <span className={Style.lol}>Indtast dit brugernavn og adgangskode for at logge ind</span>
           <p>{message}</p>
           {!loginData && !loginData.username ?  
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form onSubmit={handleSubmit(onSubmit)} className={Style.primaryForm}>
                   <div>
                       <input type="text" id="username" name="username" {...register("username", { required: true })} placeholder="Brugernavn" />
                           {errors.username && <span>Udfyld brugernavn</span> }
@@ -61,16 +63,17 @@ export const Login = () => {
                           {errors.password && <span>Udfyld adgangskode</span> }
                   </div>
                   <div>
+                      <button type="submit">Login</button>
                       <button type="reset">Annuller</button>
-                      <button type="submit">Send</button>
                   </div>
               </form> 
           :
           <form>
               <p>Du er logget ind som {loginData.username}</p>
-              <button onClick={() => {logOut()}}>Log ud</button>
+              <button onClick={() => {logOut()}} className={Style.logoutBtn}>Log ud</button>
           </form>
-          }       
+          }   
+        </div>    
       </>
   )
 }

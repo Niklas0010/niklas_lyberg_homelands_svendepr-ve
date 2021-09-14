@@ -1,0 +1,47 @@
+@import "../../Theme/Theme.scss";
+
+.loginContainer {
+ text-align: left;
+ margin: 5rem 0 0 13rem;
+
+ h1 {
+  font-family: 'Trebuchet MS', 'Arial';
+  font-size: 32px;
+ }
+
+ p {
+  font-family: 'Trebuchet MS', 'Arial';
+  font-size: 16px;
+ }
+
+ .primaryForm {
+
+
+  input {
+   width: 549px;
+   height: 44px;
+   margin-bottom: 27px;
+   padding-left: 1rem;
+   border: none; /* <-- This thing here */
+   border:solid 2px #ccc;
+   border-radius: 10px;
+  }
+
+  button {
+   font-family: 'Trebuchet MS', 'Arial';
+   font-size: 16px;
+   width: 108px;
+   height: 48px;
+   margin-right: 11px;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   background-color: $color_black;
+   cursor: pointer;
+
+   &:hover {
+   color: black;
+   }
+  }
+ }
+}

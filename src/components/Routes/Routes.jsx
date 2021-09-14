@@ -11,7 +11,7 @@ export const Routes = () => {
             <Route path='/login'>
                 <Login />
             </Route>
-            <Route path="/">
+            <Route path=''>
                 <h2>404 siden findes ikke....</h2>
             </Route>            
         </Switch>

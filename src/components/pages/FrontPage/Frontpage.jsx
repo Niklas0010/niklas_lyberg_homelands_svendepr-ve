@@ -4,8 +4,8 @@ export function Frontpage() {
 
   
   return (
-    <div>
+    <>
       
-    </div>
+    </>
   )
 }
