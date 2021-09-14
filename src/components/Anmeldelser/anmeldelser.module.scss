@@ -1,0 +1,47 @@
+@import "../../Theme/Theme.scss";
+
+// h3 {
+//   font-family: 'Trebuchet MS', 'Arial';
+//   font-size: 27px;
+// }
+
+.reviewSection {
+  background-color: $color_rosa;
+  height: 228px;
+
+  .contentContainer {
+    width: 80%;
+    margin: 0 auto;
+
+    h3 {
+      padding-top: 30px;
+      font-size: 24px;
+      font-family: 'Trebuchet MS', 'Arial';
+    }
+
+    p{
+      margin-bottom: 0;
+      font-size: 24px;
+      font-family: 'Trebuchet MS', 'Arial';
+      font-style: italic;
+    }
+
+    .userContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+      .reviewFirstname {
+        margin-right: 4px;
+        font-size: 19px;
+        font-family: 'Trebuchet MS', 'Arial';
+      }
+
+      .reviewLastname {
+        font-size: 19px;
+        font-family: 'Trebuchet MS', 'Arial';
+      }
+    }
+  }
+}
