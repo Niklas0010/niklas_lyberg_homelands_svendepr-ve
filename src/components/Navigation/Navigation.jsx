@@ -10,7 +10,7 @@ export default function Navigation() {
       <ul>
         <li><Link to="/frontpage">Forside</Link></li>&nbsp;
         <li><Link to="/housepage">Boliger til salg</Link></li>&nbsp;
-        <li><Link to="/login">Login</Link></li>&nbsp;
+        <li><Link to="/login">Login</Link></li>
       </ul>
     </nav>
   )

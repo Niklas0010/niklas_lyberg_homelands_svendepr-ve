@@ -1,0 +1,23 @@
+.houseSection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  .contentContainer {
+    text-align: center;
+    margin: 0 auto;
+
+    img {
+      height: 187px;
+      width: 400px;
+    }
+
+    h2 {
+      margin: 0;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+}

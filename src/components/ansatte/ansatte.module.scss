@@ -1,0 +1,49 @@
+h2 {
+  margin-top: 10rem;
+}
+
+.staffSection {
+  display: flex;
+	// justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+	width: 100%;
+  margin-bottom: 3rem;
+  
+  .contentContainer {
+
+    figure {
+		  position: relative; 
+      font-size: 24px;
+      font-family: 'Trebuchet MS', 'Arial';
+
+      img {
+        height: 394px;
+        width: 100%;
+        object-fit: cover;
+        border: 2px solid black;
+        
+      }
+
+      figcaption {
+        background: rgba(250,250,250, .8);
+        bottom: 0;
+        box-sizing: border-box;
+        position: absolute;
+        width: 101.5%;
+        padding: 1rem;
+        border: 2px solid black;
+        font-size: 24px;
+        font-family: 'Trebuchet MS', 'Arial';
+        font-weight: bold;
+
+        p {
+          font-size: 19px;
+          font-family: 'Trebuchet MS', 'Arial';
+          font-weight: normal;
+        }
+
+      }
+    }
+  }
+}

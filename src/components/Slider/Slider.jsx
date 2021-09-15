@@ -1,33 +1,52 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
-import { myCostumFetch } from '../../helpers/helpers';
-import Style from './slider.module.scss'
+import React, { useEffect, useState } from "react";
+import "./slider.scss";
+// import { Knapper } from "./Knapper";
+import { myCostumFetch } from "../../helpers/helpers";
 
-export default function Slider() {
-const [sliderData, setSliderData] = useState('');
+const Slider = () => {
+  const [sliderData, setSliderData] = useState([]);
 
-const getSlider = async () => {
-  const url = 'https://api.mediehuset.net/homelands/images';
-  const result = await myCostumFetch(url)
-  setSliderData(result);
-  console.log(result);
-}
+  const url = "https://api.mediehuset.net/homelands/images";
+  const getSliderData = async () => {
+    let res = await myCostumFetch(url);
+    setSliderData(res);
+    console.log(res);
+  };
+  useEffect(() => {
+    getSliderData();
+  }, []);
 
-useEffect(() => {
-  getSlider();
-}, [])
+  const [slideIndex, setSlideIndex] = useState(1);
 
+  const nextSlide = () => {
+    if (slideIndex !== sliderData.items.length) {
+      setSlideIndex(slideIndex + 1);
+    } else if (slideIndex === sliderData.items.length) {
+      setSlideIndex(1);
+    }
+  };
 
+  const prevSlide = () => {
+    if (slideIndex !== 1) {
+      setSlideIndex(slideIndex - 1);
+    } else if (slideIndex === 1) {
+      setSlideIndex(sliderData.items.length);
+    }
+  };
   return (
-    <section className={Style.sliderSection}>
-      <div className={Style.sliderUl}>{sliderData && sliderData.items.splice(3,5).map((item, key) => {
-        return(
-          <div className={Style.contentContainer} key={key}>
-            <img className={Style.imageSlider} src={item.image[1]} alt="" />
-            <p>{item.description}</p>
-          </div>
-        )
-      })}</div>
-    </section>
-  )
-}
+    <article className="containerSlider">
+      {sliderData.items &&
+        sliderData.items.map((data, i) => {
+          return (
+            <div key={i} className={slideIndex === i + 1 ? "slide active-anim" : "slide"}>
+              <img src={data.image[1]} alt="bannerimg" />
+            </div>
+          );
+        })}
+      {/* <Knapper moveSlide={nextSlide} direction={"next"} />
+      <Knapper moveSlide={prevSlide} direction={"prev"} /> */}
+    </article>
+  );
+};
+
+export { Slider };
