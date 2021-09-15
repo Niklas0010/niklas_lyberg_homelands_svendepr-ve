@@ -1,4 +1,3 @@
-import { InsertEmoticon } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react'
 import Style from './housesfrontpage.module.scss'
 import { myCostumFetch } from '../../helpers/helpers';

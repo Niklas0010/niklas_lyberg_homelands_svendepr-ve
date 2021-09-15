@@ -20,7 +20,7 @@ useEffect(() => {
   return (
     <>
       <h2>Det siger kunderne:</h2>
-      <section className={Style.reviewSection}>{reviewData && reviewData.items.splice(0,2).map((item, key) => {
+      <section className={Style.reviewSection}>{reviewData && reviewData.items.splice(0,1).map((item, key) => {
         return(
           <div className={Style.contentContainer} key={key}>
               <h3>{item.title}</h3>

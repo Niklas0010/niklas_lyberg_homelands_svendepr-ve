@@ -1,52 +1,26 @@
-import React, { useEffect, useState } from "react";
-import "./slider.scss";
-// import { Knapper } from "./Knapper";
-import { myCostumFetch } from "../../helpers/helpers";
+import Style from './slider.module.scss'
+import React from 'react'
+import SimpleImageSlider from "react-simple-image-slider";
 
-const Slider = () => {
-  const [sliderData, setSliderData] = useState([]);
+export function Slider() {
 
-  const url = "https://api.mediehuset.net/homelands/images";
-  const getSliderData = async () => {
-    let res = await myCostumFetch(url);
-    setSliderData(res);
-    console.log(res);
-  };
-  useEffect(() => {
-    getSliderData();
-  }, []);
+ const sliderImages = [
+  { url: "https://api.mediehuset.net/images/homelands/medium/apartment-3.jpg" },
+  { url: "https://api.mediehuset.net/images/homelands/medium/apartment-2.jpg" },
+  { url: "https://api.mediehuset.net/images/homelands/medium/apartment-1.jpg" }
+ ];
 
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  const nextSlide = () => {
-    if (slideIndex !== sliderData.items.length) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === sliderData.items.length) {
-      setSlideIndex(1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(sliderData.items.length);
-    }
-  };
-  return (
-    <article className="containerSlider">
-      {sliderData.items &&
-        sliderData.items.map((data, i) => {
-          return (
-            <div key={i} className={slideIndex === i + 1 ? "slide active-anim" : "slide"}>
-              <img src={data.image[1]} alt="bannerimg" />
-            </div>
-          );
-        })}
-      {/* <Knapper moveSlide={nextSlide} direction={"next"} />
-      <Knapper moveSlide={prevSlide} direction={"prev"} /> */}
-    </article>
-  );
-};
-
-export { Slider };
+ return (
+  <div className={Style.containerSlider}>
+    <SimpleImageSlider 
+     width={1903}
+     height={504}
+     navSize={50}
+     showNavs={1}
+     navStyle={2}
+     images={sliderImages}
+     // style={}
+    /> 
+  </div>
+ )
+}
