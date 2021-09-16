@@ -1,0 +1,43 @@
+.detailsSection {
+  
+
+  .detailsContainer {
+    position: relative;
+    top: -100px;
+    
+    .imgContainer {
+      max-width: 100vw;
+      height: 70vh;
+      top: -100px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+    
+    .topInfoContainer {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+
+      .logoContainer {
+        margin: 0 auto;
+        img {
+          margin-right: 2em;
+        }
+      }
+
+    }
+
+    .houses_details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: left;
+      margin-bottom: 5rem;
+
+      div {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+

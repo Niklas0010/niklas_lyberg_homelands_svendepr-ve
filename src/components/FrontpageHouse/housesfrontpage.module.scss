@@ -1,10 +1,15 @@
 .houseSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-left: 13em;
+  margin-right: 13em;
+  position: relative;
+  top: -130px;
 
   .contentContainer {
     text-align: center;
     margin: 0 auto;
+    border: 1px solid black;
 
     img {
       height: 187px;

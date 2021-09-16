@@ -1,13 +1,16 @@
 @import "../../Theme/Theme.scss";
 
-// h3 {
-//   font-family: 'Trebuchet MS', 'Arial';
-//   font-size: 27px;
-// }
+.link {
+}
+
+.h2Review {
+  margin: 0;
+}
 
 .reviewSection {
   background-color: $color_rosa;
   height: 228px;
+  margin-bottom: 40px;
 
   .contentContainer {
     width: 80%;

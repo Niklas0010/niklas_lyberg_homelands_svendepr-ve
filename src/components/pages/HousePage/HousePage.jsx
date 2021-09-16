@@ -1,9 +1,10 @@
 import React from 'react'
+import HouseGallery from '../../Homes/HouseGallery'
 
-export default function HousePage() {
+export function HousePage() {
   return (
     <div>
-      HousePage
+      <HouseGallery />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import { myCostumFetch } from '../../helpers/helpers';
 import Style from './anmeldelser.module.scss'
 
@@ -19,7 +20,7 @@ useEffect(() => {
 
   return (
     <>
-      <h2>Det siger kunderne:</h2>
+      <h2 className={Style.h2Review}>Det siger kunderne:</h2>
       <section className={Style.reviewSection}>{reviewData && reviewData.items.splice(0,1).map((item, key) => {
         return(
           <div className={Style.contentContainer} key={key}>
@@ -32,6 +33,7 @@ useEffect(() => {
           </div>
         )
       })}</section>
+      <Link className={Style.link} to="/comments">Skriv en anmeldelse</Link>
     </>
   )
 }

@@ -19,16 +19,16 @@ export function HousesFrontpage() {
 
   return (
     <section className={Style.houseSection}>{houseData && houseData.items.splice(0,3).map((item, key) => {
-      return (
-      <div className={Style.contentContainer}>
-        <img src={item.images[0].filename.medium} alt="" />
-        <h2>{item.address}</h2>
-        <p>{item.zipcode}</p>
-        <p>{item.city}</p>
-        <p>{item.type}</p>
-        <p>{item.energy_label_name} {item.num_rooms}værelser, {item.floor_space}m2 {item.price}DKK</p>
-      </div>
-      )
+        return (
+          <div className={Style.contentContainer}>
+            <img src={item.images[0].filename.medium} alt="" />
+            <h2>{item.address}</h2>
+            <p>{item.zipcode}</p>
+            <p>{item.city}</p>
+            <p>{item.type}</p>
+            <p>{item.energy_label_name} {item.num_rooms}værelser, {item.floor_space}m2 {item.price}DKK</p>
+          </div>
+        )
     })}</section>
   )
 }

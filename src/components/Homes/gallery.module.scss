@@ -1,0 +1,57 @@
+.gallerySection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  margin-left: 11em;
+  margin-bottom: 5rem;
+
+  .galleryContainer {
+    height: 400px;
+    width: 400px;
+    text-align: left;
+    border: 1px solid black;
+    padding: 20px;
+
+    ul {
+      display: flex;
+      list-style: none;
+      margin-bottom: 0;
+
+      .energyLabel {
+        background-color: green;
+        padding: 5px 10px;
+      }
+
+      li {
+        margin-right: 10px;
+        color: black;
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    img {
+      height: 187px;
+      width: 400px;
+    }
+    @media screen and (max-width: 700px) {
+      height: 400px;
+      width: 400px;
+      text-align: left;
+      border: 1px solid black;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2em;
+    margin-left: 9em;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+}

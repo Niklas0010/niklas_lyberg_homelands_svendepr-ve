@@ -14,7 +14,7 @@ export function Slider() {
   <div className={Style.containerSlider}>
     <SimpleImageSlider 
      width={1903}
-     height={504}
+     height={1000}
      navSize={50}
      showNavs={1}
      navStyle={2}
