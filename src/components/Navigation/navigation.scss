@@ -1,0 +1,124 @@
+@import "../../Theme/Theme.scss";
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+
+nav {
+  display: grid;
+  grid-template-columns: auto 70%;
+  padding: 20px;
+  background-image: url("../../assets/images/NavBaggrund.png");
+  background-size: cover;
+}
+
+.logo {
+  width: 50%;
+  margin-left: 17rem;
+  margin-top: 1.5rem;
+  border: 2px solid black;
+}
+.nav-ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 30%;
+
+  .link {
+    a {
+      display: flex;
+      color: #fff;
+      font-family: $header-font;
+      font-size: 28px;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+  }
+}
+
+.burgerMenu {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.burgerMenu:focus {
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .nav-ul {
+    display: none;
+        width: 50vw;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        padding: 0;
+        
+  }
+  .logo {
+    position: relative;
+    width: 160px;
+    height: 80px;
+    margin-left: 30px;
+    top: -30px;
+  }
+  .nav-ul.show {
+    display: flex;
+    
+  }
+  .burgerMenu {
+    display: block;
+    position: relative;
+    top: -35px;
+    left: 240px;
+    width: 50%;
+    font-size: 30px;
+  }
+
+  .link {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.856); 
+  }
+}
+// .navigation {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   font-family: 'Odibee Sans';
+//   font-size: 28px;
+//   background-color: $color_black;
+//   background: url("../../assets/images/NavBaggrund.png");
+//   background-size: cover;
+//   overflow: hidden;
+//   height: 9rem;
+
+//   img {
+//     width: 30%;
+//     margin-left: 13rem;
+//     margin-top: 2rem;
+//     border: 2px solid black;
+//   }
+
+//   ul {
+//     display: flex;
+//     list-style-type: none;
+//     padding-left: 11rem;
+
+//     li {
+
+//       a {
+//         text-decoration: none;
+//         color: white;
+//         margin-right: 25px;
+
+//         &:hover {
+//           color: $color_brun;
+//         }
+//       }
+//     }
+//   }
+// }

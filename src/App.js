@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { AuthProvider } from './components/Login/AuthProvider';
 import { Routes } from './Routes/Routes';
-import Navigation from './components/Navigation/Navigation';
+import { Navigation } from './components/Navigation/Navigation';
 import { Footer } from './components/Footer/Footer';
 
 function App() {

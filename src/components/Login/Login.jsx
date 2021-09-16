@@ -68,7 +68,7 @@ export const Login = () => {
                   </div>
               </form> 
           :
-          <form>
+          <form className={Style.logoutForm}>
               <p>Du er logget ind som {loginData.username}</p>
               <button onClick={() => {logOut()}} className={Style.logoutBtn}>Log ud</button>
           </form>

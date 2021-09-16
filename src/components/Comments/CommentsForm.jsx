@@ -3,9 +3,14 @@ import { useForm } from "react-hook-form";
 import { myCostumFetch } from "../../helpers/helpers";
 import { AuthContext } from "../Login/AuthProvider";
 import { useHistory } from "react-router";
+import Style from "./comments.module.scss"
 
 export const CommentsForm = () => {
-  const { register, handleSubmit, formState: { errors },} = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const { loginData } = useContext(AuthContext);
   const history = useHistory();
 
@@ -46,37 +51,39 @@ export const CommentsForm = () => {
   };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="title">Titel:</label>
-          <input
-            className="required"
-            type="text"
-            name="title"
-            {...register("title", { required: true })}
-          />
-          {errors.title && (
-            <span className="error">Du skal indtaste en titel</span>
-          )}
-        </div>
-        <div>
-          <label htmlFor="content">Anmeldelse:</label>
-          <textarea
-            className="required"
-            name="content"
-            id=""
-            cols="30"
-            rows="10"
-            {...register("content", { required: true })}
-          ></textarea>
-          {errors.comment && (
-            <span className="error">Du skal skrive en anmeldelse</span>
-          )}
-        </div>
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
+      <div className={Style.commentsContainer}>
+        <form className={Style.commentsForm} onSubmit={handleSubmit(onSubmit)}>
+          <div>
+            <label htmlFor="title">Titel:</label>
+            <input
+              className="required"
+              type="text"
+              name="title"
+              {...register("title", { required: true })}
+            />
+            {errors.title && (
+              <span className="error">Du skal indtaste en titel</span>
+            )}
+          </div>
+          <div>
+            <label htmlFor="content">Anmeldelse:</label>
+            <textarea
+              className="required"
+              name="content"
+              id=""
+              cols="30"
+              rows="10"
+              {...register("content", { required: true })}
+            ></textarea>
+            {errors.comment && (
+              <span className="error">Du skal skrive en anmeldelse</span>
+            )}
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };

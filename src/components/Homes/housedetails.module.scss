@@ -4,6 +4,7 @@
   .detailsContainer {
     position: relative;
     top: -100px;
+    z-index: -1;
     
     .imgContainer {
       max-width: 100vw;

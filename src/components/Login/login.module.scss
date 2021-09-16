@@ -3,7 +3,7 @@
 
 .loginContainer {
  text-align: left;
- margin: 5rem 0 0 13rem;
+ margin: 5rem 0 18.8rem 13rem;
 
  h1 {
   font-family: 'Trebuchet MS', 'Arial';
@@ -26,6 +26,10 @@
    border: none; /* <-- This thing here */
    border:solid 2px #ccc;
    border-radius: 10px;
+    @media screen and (max-width: 700px) {
+     width: 400px;
+     height: 44px;
+   }
   }
 
   button {
@@ -37,12 +41,22 @@
    color: white;
    border: none;
    border-radius: 5px;
-   background-color: $color_black;
+   background-color: $black;
    cursor: pointer;
-
+   
    &:hover {
-   color: black;
+   background-color: rgb(20, 20, 20);
    }
+  }
+ }
+  @media screen and (max-width: 700px) {
+  margin: 5rem 0 13.75rem 9rem;
+ }
+ .logoutForm {
+  margin-bottom: 27.8rem;
+
+  @media screen and (max-width: 700px) {
+   margin-bottom: 22rem;
   }
  }
 }
