@@ -22,14 +22,13 @@ export const Login = () => {
 
       const url = "https://api.mediehuset.net/token"
       const result = await myCostumFetch(url, options)   
-      //console.log(result);
       handleSessionData(result)
   }
 
   const handleSessionData = (res) => {
       if(!res.message) { // hvis der ikke er nogen message
           setLoginData(res) // så køre vi funktionen setLoginData med parametren "res"
-          sessionStorage.setItem('token', JSON.stringify(res)) // og så putter vi vores accesstoken i sessionstorage, og laver den til en string
+          sessionStorage.setItem('token', JSON.stringify(res)) // og så putter vi vores res i sessionstorage, og laver den til en string
       } else { // ellers
           setMessage('Fandt ingen match på brugernavn eller adgangskode') // 
       }

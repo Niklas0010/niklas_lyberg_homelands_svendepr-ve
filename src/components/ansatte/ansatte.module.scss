@@ -16,6 +16,7 @@ h2 {
 		  position: relative; 
       font-size: 24px;
       font-family: 'Trebuchet MS', 'Arial';
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
       img {
         height: 394px;
@@ -32,7 +33,7 @@ h2 {
         bottom: 0;
         box-sizing: border-box;
         position: absolute;
-        bottom: 5px;
+        bottom: 2px;
         width: 101%;
         padding: 1rem;
         border: 1px solid black;
